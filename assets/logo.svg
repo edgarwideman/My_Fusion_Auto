@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="false"
+     inkscape:zoom="0.51843089"
+     inkscape:cx="188.0675"
+     inkscape:cy="401.21066"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path8639" />
+    </marker>
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect7847"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect5942"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1270">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.986542px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 220.94755,485.97552 94.58927,-28.36641 95.00749,30.74728 1.98809,-168.57933 -192.17784,-17.59059 0.59299,183.78913"
+         id="path1272"
+         sodipodi:nodetypes="cccccc" />
+    </clipPath>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask2664">
+      <circle
+         style="fill:#0015a1;fill-opacity:1;stroke:#afaca4;stroke-width:0.290071"
+         id="circle2666"
+         cx="72.980637"
+         cy="107.17436"
+         r="41.963882" />
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5938">
+      <circle
+         style="display:none;fill:#0048ff;fill-opacity:0.899598;stroke:#afaca4;stroke-width:0.219235"
+         id="circle5940"
+         cx="141.62326"
+         cy="40.31797"
+         r="18.395422" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7843">
+      <circle
+         style="display:none;fill:#0034b8;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.185456;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle7845"
+         cx="79.615234"
+         cy="86.249847"
+         r="47.502705"
+         d="M 127.11794,86.249847 A 47.502705,47.502705 0 0 1 79.615234,133.75255 47.502705,47.502705 0 0 1 32.11253,86.249847 47.502705,47.502705 0 0 1 79.615234,38.747143 47.502705,47.502705 0 0 1 127.11794,86.249847 Z" />
+      <path
+         id="lpe_path-effect7847"
+         style="fill:#0034b8;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.185456;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         class="powerclip"
+         d="M 5.0556363,11.690249 H 154.17483 V 160.80945 H 5.0556363 Z M 127.11794,86.249847 A 47.502705,47.502705 0 0 0 79.615234,38.747143 47.502705,47.502705 0 0 0 32.11253,86.249847 47.502705,47.502705 0 0 0 79.615234,133.75255 47.502705,47.502705 0 0 0 127.11794,86.249847 Z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:1;fill:#0034b8;fill-opacity:1;stroke:#8ba6f6;stroke-width:3.365;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path6239"
+       clip-path="url(#clipPath7843)"
+       transform="translate(20.924518,70.428866)"
+       d="M 147.49233,86.249847 A 67.877098,67.877098 0 0 1 79.615234,154.12695 67.877098,67.877098 0 0 1 11.738136,86.249847 67.877098,67.877098 0 0 1 79.615234,18.372749 67.877098,67.877098 0 0 1 147.49233,86.249847 Z"
+       sodipodi:type="arc"
+       sodipodi:ry="67.877098"
+       sodipodi:rx="67.877098"
+       sodipodi:cy="86.249847"
+       sodipodi:cx="79.615234"
+       inkscape:path-effect="#path-effect7847"
+       inkscape:export-filename="C:\Users\edywi\Downloads\path6239.png"
+       inkscape:export-xdpi="13.145561"
+       inkscape:export-ydpi="13.145561" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#0034b8;fill-opacity:1;stroke:none;stroke-width:12.7181;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path9143"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="379.99277"
+       sodipodi:cy="592.17151"
+       sodipodi:r1="231.59625"
+       sodipodi:r2="115.79813"
+       sodipodi:arg1="0.52327822"
+       sodipodi:arg2="1.5704758"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 580.59811,707.90534 179.46166,708.03392 379.91853,360.57527 Z"
+       transform="scale(0.26458333)"
+       inkscape:transform-center-x="-0.0098198717"
+       inkscape:transform-center-y="-15.310623"
+       inkscape:export-filename="C:\Users\edywi\Downloads\path6239.png"
+       inkscape:export-xdpi="13.145561"
+       inkscape:export-ydpi="13.145561" />
+  </g>
+</svg>
