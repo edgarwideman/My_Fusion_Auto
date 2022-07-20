@@ -26,6 +26,9 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import ca.edgarwideman.myfusionauto.services.GpsServices;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -34,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private BroadcastReceiver GpsDataReceiver;
     private BroadcastReceiver statusReceiver;
+    private BroadcastReceiver clockReceiver;
+    private final SimpleDateFormat clockTime = new SimpleDateFormat("h:mm a");
+    private TextView clock;
     LatLng latlng = new LatLng(43.5638885, -80.6687718);
     private Marker marker = null;
 
@@ -64,7 +70,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this::onMapReady);
 
 
+
+
         speed = findViewById(R.id.tv_m_speed);
+        clock = findViewById(R.id.tv_m_clock);
         gpsStatus = findViewById(R.id.tv_m_no_gps);
     }
 
@@ -119,6 +128,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.setBuildingsEnabled(true);
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (clockReceiver != null) {
+            unregisterReceiver(clockReceiver);
+        }
+    }
 
     @Override
     protected void onResume() {
@@ -160,26 +176,24 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         marker.setPosition(location);
                     }
                     int speedInt = Integer.parseInt(Speed);
-                    zoom = 11;
-                    if(speedInt < 99){
-                        zoom = 15;
-                    } else if(speedInt < 79){
+                    zoom = 15;
+                    if(speedInt < 102){
                         zoom = 16;
-                    } else if(speedInt < 59){
-                        zoom = 17;
-                    } else if(speedInt < 49){
-                        zoom = 18;
-                    } else if(speedInt < 40){
-                        zoom = 19;
-                    } else if(speedInt < 30){
-                        zoom = 20;
                     }
-                    else if(speedInt < 65)
+                     if(speedInt < 79){
+                        zoom = 17;
+                    }
+                     if(speedInt < 59){
+                        zoom = 18;
+                    }
+                     if(speedInt < 40){
+                        zoom = 19;
+                    }
                     marker.setRotation(bearing);
                     speed.setText(Speed);
                     CameraPosition newCamPos = new CameraPosition(location,
                             zoom,
-                            60,
+                            55,
                             bearing);
                     mMap.animateCamera(CameraUpdateFactory.newCameraPosition(newCamPos), 1000, null);
 //                    mMap.animateCamera(CameraUpdateFactory.newLatLng(location));
@@ -197,6 +211,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             };
         }
+        if(clockReceiver == null){
+            clockReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context ctx, Intent intent) {
+                    if (intent.getAction().compareTo(Intent.ACTION_TIME_TICK) == 0)
+                        clock.setText(clockTime.format(new Date()));
+                }
+            };
+        }
+
+
+        registerReceiver(clockReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
         registerReceiver(statusReceiver, new IntentFilter("status_update"));
         registerReceiver(GpsDataReceiver, new IntentFilter("location_update"));
     }
