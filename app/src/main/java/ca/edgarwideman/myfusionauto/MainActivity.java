@@ -10,9 +10,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -43,8 +48,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng latlng = new LatLng(43.5638885, -80.6687718);
     private Marker marker = null;
 
+    private SensorManager sensorManager;
+    private Sensor sensorLight;
+
     TextView speed;
     TextView gpsStatus;
+
+    TextView calDoodle;
 
 
 
@@ -69,12 +79,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this::onMapReady);
 
-
+        //Keep the screen on all the time
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        //Light sensor
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sensorLight = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
 
 
         speed = findViewById(R.id.tv_m_speed);
         clock = findViewById(R.id.tv_m_clock);
         gpsStatus = findViewById(R.id.tv_m_no_gps);
+
+        calDoodle = findViewById(R.id.tv_main_caldoodle);
     }
 
     @Override
@@ -111,6 +127,22 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Log.d(TAG, "onMapReady: I have no idea if night mode is on or not. 🤷‍️");
                 break;
         }
+
+
+        SensorEventListener sensorEventListenerLight = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent event) {
+                float floatSensorValue = event.values[0]; // lux
+
+                calDoodle.setText(String.valueOf(floatSensorValue));
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+            }
+        };
+        sensorManager.registerListener(sensorEventListenerLight, sensorLight, SensorManager.SENSOR_DELAY_NORMAL);
+
 
         // Add a marker in Sydney and move the camera
         if(marker == null){
